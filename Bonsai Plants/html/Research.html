@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+  </head>
+  <body>
+    <style>
+      /* using * in the css fo the wholw website styles*/
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+      }
+      /* using root so that we can use the same codes where we need */
+      :root {
+        --bg-color: #222327;
+        --text-color: #fff;
+        --main-color: #4fd3f9;
+        --first_color: #15241c;
+        --second-color: #09382f;
+        --third-color: #ff882e;
+        --fourth-color: #e55e2e;
+        --sixth-color: #ec9937;
+        --fifth-color: #f8f1e0;
+      }
+      /* using html tag for the changing the font size and scroll efects */
+      html {
+        font-size: 63.5%;
+        scroll-behavior: smooth;
+        scroll-padding-top: 90px;
+        overflow-x: hidden;
+      }
+
+      html::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      html::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      html::-webkit-scrollbar-thumb {
+        background: #fff;
+        border-radius: 50px;
+      }
+      /* styling the header of the website and aligning them */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 15px 7%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000;
+        transition: 0.6s;
+        background-color: #333;
+      }
+
+      header .navbar {
+        position: relative;
+        transition: 0.6s;
+      }
+
+      header .icons {
+        transition: 0.6s;
+        display: flex;
+      }
+
+      header .logo {
+        position: relative;
+        transition: 0.6s;
+        display: inline;
+        padding-left: 10px;
+      }
+
+      header .navbar a {
+        position: relative;
+        font-size: 16px;
+        display: inline block;
+        padding: 2px 10px;
+        color: #f2aa4c;
+        transition: 1s;
+        margin: 0 10px;
+      }
+      header:hover .navbar a {
+        transform: scale(1.5);
+      }
+
+      header.sticky {
+        padding: 5px 100px;
+        background: #6b6b6b;
+      }
+
+      header .navbar a:hover {
+        color: #535353;
+        border-bottom: 1px solid #535353;
+        padding-bottom: 5px;
+        transform: scale(2);
+        color: var(--main-color);
+      }
+      header .navbar a:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+        transform-origin: right;
+        transform: scaleX(0);
+        z-index: -1;
+      }
+
+      header .navbar a:hover:before {
+        transition: transform 0.5s;
+        transform-origin: left;
+        transform: scaleX(1);
+      }
+
+      header .icons a img {
+        font-size: 25px;
+        color: #333;
+        margin-left: 20px;
+        color: #eee;
+        transition: 0.6s;
+        cursor: pointer;
+      }
+
+      header .icons a img:hover {
+        transform: translateY(-10px);
+      }
+
+      header .icons .example {
+        padding-top: 6px;
+        transition: 0.6s;
+        display: none;
+      }
+      body{
+        background-color:rgba(221, 221, 186, 0.995);
+      }
+
+      .dropdown {
+        position: relative;
+        display: inline-block;
+      }
+
+      .dropdown-content {
+        display: none;
+        justify-content: space-between;
+        position: absolute;
+        z-index: 1;
+        background-color: black;
+        min-width: 260px;
+        border-radius: 8px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        padding: 15px;
+      }
+      .dropdown .dropdown-content a {
+        font-size: 10px;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+        display: flex;
+      }
+
+      .mySlides1 {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        background-color: white;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        transition: 0.6s;
+      }
+
+      footer {
+        position: relative;
+        width: 100%;
+        background: #3586ff;
+        min-height: 80px;
+        padding: 10px 40px;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        flex-direction: column;
+      }
+
+      footer .social_icon,
+      footer .menua {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px 0;
+        flex-wrap: wrap;
+      }
+
+      footer .social_icon li a img {
+        font-size: 2em;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        background-color: transparent;
+      }
+      footer li a img {
+        align-items: center;
+      }
+
+      footer .social_icon li a img:hover {
+        transform: translateY(-10px);
+      }
+
+      footer .menua li a {
+        font-size: 2.2em;
+        color: #fff;
+        margin: 0 10px;
+        display: inline-block;
+        transition: 0.5s;
+        opacity: 0.75;
+      }
+
+      footer .menua li a:hover {
+        transform: translateY(-10px);
+        opacity: 1;
+      }
+
+      footer p {
+        color: #fff;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
+
+      footer .wave {
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: url(../img/wave.png);
+        background-size: 1000px 100px;
+      }
+
+      footer .wave#wave1 {
+        z-index: 1000;
+        opacity: 1;
+        bottom: 0;
+        animation: animateWave 4s linear infinite;
+      }
+
+      footer .wave#wave2 {
+        z-index: 999;
+        opacity: 0.5;
+        bottom: 10px;
+        animation: animateWave_02 4s linear infinite;
+      }
+
+      footer .wave#wave3 {
+        z-index: 1000;
+        opacity: 0.2;
+        bottom: 15px;
+        animation: animateWave 3s linear infinite;
+      }
+
+      footer .wave#wave4 {
+        z-index: 999;
+        opacity: 0.7;
+        bottom: 20px;
+        animation: animateWave_02 3s linear infinite;
+      }
+
+      @keyframes animateWave {
+        0% {
+          background-position-x: 1000px;
+        }
+        100% {
+          background-position-x: 0px;
+        }
+      }
+
+      @keyframes animateWave_02 {
+        0% {
+          background-position-x: 0px;
+        }
+        100% {
+          background-position-x: 1000px;
+        }
+      }
+      #hal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 40px;
+        border-bottom: 1px solid black;
+      }
+      .Research-heading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .Research-heading h2 {
+        font-size: 40px;
+        color: black;
+        font-weight: 600;
+      }
+      .research-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 20px 0px;
+        flex-wrap: wrap;
+        padding: 30px;
+      }
+
+      .research-container p {
+        align-items: flex-end;
+        font-size: 16px;
+      }
+      .container {
+        display: flex;
+      }
+      .resea h1 {
+        font-size: medium;
+        align-items: center;
+      }
+      .id {
+        padding: 30px;
+        font-size: medium;
+        background-color: rgba(221, 221, 186, 0.995);
+        color: rgb(253, 252, 252);
+        padding-left: 5 0px;
+      }
+      .id1 {
+        background-color: rgba(221, 221, 186, 0.995);
+        padding: 30px;
+        font-size: medium;
+        color: rgb(255, 255, 255);
+      }
+      .red {
+        background-color: black;
+        color: bisque;
+      }
+      .mySlides1 {
+        background-image: url(../img/h.jpg);
+        display: block;
+        position: relative;
+        background-position: 0 20px;
+      }
+      .hr {
+        color: black;
+        width: 100%;
+        height: 30%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .c1 {
+        width: 500px;
+        height: 310px;
+        /*border-radius: 30px;*/
+        cursor: pointer;
+        border: none;
+        box-shadow: 8px 8px 8px gray;
+        margin: 15px 0;
+        transition: 0.2s ease;
+        position: relative;
+        background-color: #203354;
+        color: white;
+        text-align: center;
+        font-size: medium;
+      }
+
+      .c1 img {
+        size: auto;
+        /* border-radius: 70px;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px ;*/
+        overflow: auto;
+        border: none;
+        height: 180px;
+      }
+
+      .research {
+        display: flex;
+        justify-content: space-around;
+        white-space: 20px;
+        padding-top: 20px;
+        flex-wrap: wrap;
+        /* background-color: aliceblue; */
+      }
+      .des {
+        align-items: center;
+        font-size: 12px;
+        color: rgb(245, 244, 243);
+        text-align: center;
+      }
+      .red {
+        font-size: 30px;
+        color: white;
+        background-color: #201e1e;
+        text-align: center;
+        padding-top: 10px;
+      }
+    </style>
+    <!--Header section starts-->
+    <header>
+      <a href="" class="logo"><img src="../img/logoo.png" width="40px" /></a>
+      <nav class="navbar">
+        <a href="./home.html">Home</a>
+        <a href="./product.html">Product</a>
+        <a href="./blog.html">Blog </a>
+        <a href="./Research.html">Research</a>
+        <div class="dropdown">
+          <a href="./aboutus.html">About us</a>
+          <div class="dropdown-content">
+            <a href="./aboutus.html">Niroj</a>
+            <a href="./aboutus1.html">Paleswan</a>
+            <a href="./aboutus2.html">Rojina</a>
+            <a href="./aboutus3.html">Jay </a>
+            <a href="./aboutus4.html">Adish</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="icons">
+        <a href="" onclick="name123()"
+          ><img src="../img/search.png" alt="" width="28px"
+        /></a>
+        <a href="./account.html"
+          ><img src="../img/account.png" alt="" width="25px"
+        /></a>
+        <a href="" onclick="name123()"
+          ><img src="../img/wishlist.png" alt="" width="25px"
+        /></a>
+        <a href="" onclick="name123()"
+          ><img src="../img/shopping cart.png" alt="" width="28px"
+        /></a>
+      </div>
+    </header>
+    <!-- Header section ends-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <section>
+        <div class="mySlides mySlides1 fade">
+          <div id="hero">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <a href="./product.html"> </a>
+          </div>
+        </div>
+      </section>
+
+      <h1 class="red">Research</h1>
+      <!----Research-->
+      <section class="id">
+        <h1>1) LUKANI</h1>
+        <div class="research">
+          <div class="c1">
+            <h3>Researched Website</h3>
+            <img
+              src="../img/Screenshot (1777).png "
+              alt=""
+              width="500px"
+              height="150px"
+            />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+                The website features a unique navigation bar placed in the
+                center of the page with an automatic slider that showcases
+                featured content. The dynamic slider provides an eye-catching
+                and interactive experience for the user.It has the color
+                changing functionality on links on hover.
+              </p>
+            </div>
+          </div>
+          <br />
+
+          <div class="c1">
+            <h3>Our Website</h3>
+            <img
+              src="../img/ss1.png"
+              alt=""
+              width="500px"
+              height="150px"
+            />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+                The website has a navigation bar in the middle of the page with
+                a border that becomes visible upon hovering. The bar features a
+                clickable slider that allows the user to easily access different
+                sections of the website. The combination of the central
+                placement and hover functionality creates a visually appealing
+                user experience.This website also has the black bacground color
+                on header which is diffrent from the others and also has the
+                cart wishlist account links.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="id1">
+        <h1>2) LUKANI</h1>
+        <div class="research">
+          <div class="c1">
+            <h3>Researched Website</h3>
+            <img
+              src="../img/Screenshot 2023-01-31 232452.png"
+              alt=""
+              width="500px"
+              height="150px"
+            />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+                This website has the single product card which has the
+                whitesmoke background color showing add to cart and the wishlist
+                icons functionality on hover.This website has the slider product
+                card funtionality.
+              </p>
+            </div>
+          </div>
+          <br />
+
+          <div class="c1">
+            <h3>Our Website</h3>
+            <img
+              src="../img/Screenshot 2023-02-01 034355.png"
+              alt=""
+              width="500px"
+              height="150px"
+            />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+                The difference between the two photos is the design and layout.
+                The first photo has no border radius on the product image and
+                the product description is positioned below the image, while the
+                second photo has a more rounded border radius on the product
+                image and the product description is positioned alongside the
+                image. The second photo has a simpler design and layout compared
+                to the first photo. The design and layout of an image can impact
+                the visual appeal and ease of understanding for the viewer.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="id">
+        <h1>3) Google</h1>
+        <div class="research">
+          <div class="c1">
+            <h3>Researched Website</h3>
+            <img
+              src="../img/324400318_928412065182183_4536909244604953367_n.png"
+              alt=""
+              width="500px"
+              height="150px"
+            />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+                Google login page has a clean, simple design with a white
+                background, the Google logo in blue, and the login form in the
+                center. The form requires users to enter their email or phone
+                number and password for access. A "Next" button is provided for
+                submission.It has diifrent pages for the login and submit pages.
+              </p>
+            </div>
+          </div>
+          <br />
+
+          <div class="c1">
+            <h3>Our Website</h3>
+            <img
+              src="../img/324997065_3453104128260487_8910475768286790192_n.png"
+              alt=""
+              width="500px"
+              height="150px"
+            />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+               Our page has the login  and sign up  on the same page.Our page 
+               has the background image also which is diffrent from the google page.
+               Our page sign up card also has the background image .On clicking the butoon it
+              shows the diffrent popup on diifrent conditions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="id1">
+        <h1>4) BONSAI OUTLET</h1>
+        <div class="research">
+          <div class="c1">
+            <h3>Researched Website</h3>
+            <img
+              src="../img/Screenshot 2023-02-01 000851.png"
+              alt=""
+              width="500px"
+              height="150px"
+            />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+                This website has the product detail page on the center and has the whiite background
+                there is the slider for the products image which is clickable .The product description has 
+                been put under the photo.
+              </p>
+            </div>
+          </div>
+          <br />
+
+          <div class="c1">
+            <h3>Our Website</h3>
+            <img
+              src="../img/Screenshot 2023-02-01 001130.png"
+              alt=""
+              width="500px"
+              height="150px"
+            />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+               Our page has the contnents of the product detail page just under the navigation page.
+               The image on the product detail page is clickabe which showws diffrent iage whrn clicked
+               There is similar product list just uder it .The product detail description is at the slide
+               of the images where as the bonsai outlet has the product detai under the page.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="id">
+        <h1>5) BonsaiBoy</h1>
+        <div class="research">
+          <div class="c1">
+            <h3>Researched Website</h3>
+            <img src="../img/324617636_735029731271970_6778240270902846992_n.png" alt="" width="500px" height="150px" />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+                 This blog page is simple which has  its topics is the side navbar.
+                 The information are in the same page as the blog page.
+
+              </p>
+            </div>
+          </div>
+          <br />
+
+          <div class="c1">
+            <h3>Our Website</h3>
+            <img
+              src="../img/Screenshot 2023-02-01 152619.png"
+              alt=""
+              width="500px"
+              height="150px"
+            />
+            <div class="des">
+              <h1 style="text-align: center">Bonsai Plant</h1>
+              <p>
+               Our website has the contsnts in the middle .There is diffrent links with the
+               images in the blog page.Each blog links taks to teh diffrent page with diffrent 
+               information.The box is created to make  the card to  diffrent from the  background-image,
+               When we click at the read more we wiil be taken to diffrent page
+
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--Featur-->
+
+      <br /><br /><br /><br /><br /><br /><br /><br />
+      <!--footer secction starts-->
+      <footer>
+        <div class="waves">
+          <div class="wave" id="wave1"></div>
+          <div class="wave" id="wave2"></div>
+          <div class="wave" id="wave3"></div>
+          <div class="wave" id="wave4"></div>
+        </div>
+        <ul class="social_icon">
+          <li>
+            <a href="#">
+              <img src="../img/instagram icon.png" width="40px" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../img/linkedin.png" width="40px" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../img/imgbin_facebook-png.png" alt="" width="40px" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="../img/twitter icon.png" width="40px" alt="" />
+            </a>
+          </li>
+        </ul>
+        <ul class="menua">
+          <li><a href="./home.html">Home</a></li>
+          <li><a href="./product.html">Product</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./Research.html">Research</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+        </ul>
+        <p>&copy;2023 Bonsai Plants Nepal| All Rights Reserved</p>
+      </footer>
+      <!--footer section ends-->
+      <!--javascript link-->
+      <script src="../js/home.js"></script>
+    </div>
+  </body>
+</html>

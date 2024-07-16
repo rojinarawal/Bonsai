@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+
+  <body>
+    <style>
+      .mySlides1 {
+        background: url(../img/111.jpg)
+          no-repeat center center;
+        display: block;
+        position: relative;
+        background-position: 0px 20px;
+        flex: content;
+        background-size: cover;
+      }
+
+      .mySlides2 {
+        background-image: url(../img/bg1.jpg);
+        display: block;
+        position: relative;
+        background-position: 0px 20px;
+        flex: content;
+        background-size: cover;
+      }
+
+      .mySlides3 {
+        background-image: url(../img/bg.jpg);
+        display: block;
+        position: relative;
+        background-position: 0px 20px;
+        flex: content;
+        background-size: cover;
+      }
+    </style>
+    <!--Header section starts-->
+    <header>
+      <a href="" class="logo"
+        ><img
+          src="../img/logoo.png"
+          width="40px"
+      /></a>
+      <nav class="navbar">
+        <a href="./home.html">Home</a>
+        <a href="./product.html">Product</a>
+        <a href="./Blog.html">Blog </a>
+        <a href="./Research.html">Research</a>
+        <div class="dropdown">
+          <a href="./aboutus.html">About us</a>
+          <div class="dropdown-content">
+            <a href="./aboutus.html">Niroj</a>
+            <a href="./aboutus1.html">Paleswan</a>
+            <a href="./aboutus2.html">Rojina</a>
+            <a href="./aboutus3.html">Jay </a>
+            <a href="./aboutus4.html">Adish</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="icons">
+        <a href="" onclick="name123()"
+          ><img src="../img/search.png" alt="" width="28px"
+        /></a>
+        <a href="./account.html"
+          ><img src="../img/account.png" alt="" width="25px"
+        /></a>
+        <a href="" onclick="name123()"
+          ><img src="../img/wishlist.png" alt="" width="25px"
+        /></a>
+        <a href="" onclick="name123()"
+          ><img src="../img/shopping cart.png" alt="" width="28px"
+        /></a>
+      </div>
+    </header>
+    <!-- Header section ends-->
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+      <!-- Full-width images with number and caption text -->
+      <section>
+        <div class="mySlides mySlides1 fade">
+          <div id="hero">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <h2>
+              "Our eco-friendly plants are not only <br />
+              good for the environment, but they <br />
+              also bring a touch of nature to your <br />
+              home or garden."
+            </h2>
+            <p style="color: white;" >Get 20% off for Bonsai Plants members</p>
+            <a href="./product.html">
+              <button>Shop Now</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="mySlides mySlides2 fade">
+          <div id="hero">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <h2 style="font-weight: bolder;" >
+              # GO GREEN
+            </h2>
+            <p style="color: green;font-weight: bold;">Get special offer on Greenpeace Day </p>
+            <a href="./product.html">
+              <button>Shop Now</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="mySlides mySlides3 fade">
+          <div id="hero">
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+            <h2>
+              "Discover the ancient art of bonsai, modernized for your home."
+            </h2>
+            <a href="./product.html">
+              <button>Shop Now</button>
+            </a>
+          </div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </section>
+    </div>
+    <!-- Slideshow container ends -->
+    <!--Featured product page starts-->
+    <section class="products" id="products">
+      <h1 class="heading">Featured <span>Products</span></h1>
+      <div class="box-container">
+        <div class="box" onclick="window.location.href='prod.html' ">
+          <span class="discount">-10%</span>
+          <div class="image">
+            <img class="img1" src="../img/bonsai1.jpg" width="250px" alt="" />
+            <div class="icons">
+              <a href=""
+                ><img src="../img/wishlist.png" alt="" width="25px" />Add
+                wishlist</a
+              >
+              <a href=""
+                ><img
+                  class="cart-btn"
+                  src="../img/shopping cart.png"
+                  alt=""
+                  width="28px"
+                />Add to cart</a
+              >
+            </div>
+          </div>
+          <div class="content">
+            <h3>Juniper Bonsai</h3>
+            <div class="price">Rs 14,400<span>Rs 16,000</span></div>
+          </div>
+        </div>
+        <div class="box" onclick="window.location.href='prod1.html' ">
+          <span class="discount">-18%</span>
+          <div class="image">
+            <img class="img1" src="../img/maple5.avif" width="250px" alt="" />
+            <div class="icons">
+              <a href=""
+                ><img src="../img/wishlist.png" alt="" width="25px"
+              />Add wishlist</a>
+              <a href=""
+                ><img
+                  class="cart-btn"
+                  src="../img/shopping cart.png"
+                  alt=""
+                  width="28px"
+                />Add to cart</a
+              >
+            </div>
+          </div>
+          <div class="content">
+            <h3>Maple Bonsai</h3>
+            <div class="price">Rs 12,300<span>Rs 15,000</span></div>
+          </div>
+        </div>
+
+        <div class="box" onclick="window.location.href='prod2.html' ">
+          <span class="discount">-8%</span>
+          <div class="image">
+            <img class="img1" src="../img/pine1.jpg" width="250px" alt="" />
+            <div class="icons">
+              <a href=""
+                ><img src="../img/wishlist.png" alt="" width="25px" />add
+                wishlist</a
+              >
+              <a href=""
+                ><img
+                  class="cart-btn"
+                  src="../img/shopping cart.png"
+                  alt=""
+                  width="28px"
+                />Add to cart</a
+              >
+            </div>
+          </div>
+          <div class="content">
+            <h3>Pine Bonsai</h3>
+            <div class="price">Rs 11,960<span>Rs 13,000</span></div>
+          </div>
+        </div>
+
+        <div class="box" onclick="window.location.href='prod3.html' ">
+          <span class="discount">-5%</span>
+          <div class="image">
+            <img class="img1" src="../img/cedar3.jpg" width="250px" alt="" />
+            <div class="icons">
+              <a href=""
+                ><img src="../img/wishlist.png" alt="" width="25px" />add
+                wishlist</a
+              >
+              <a href=""
+                ><img
+                  class="cart-btn"
+                  src="../img/shopping cart.png"
+                  alt=""
+                  width="28px"
+                />Add to cart</a
+              >
+            </div>
+          </div>
+          <div class="content">
+            <h3>Cedar Bonsai</h3>
+            <div class="price">Rs 9,500<span>Rs 10,000</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--Featured product page ends-->
+    <!--best selling products page starts-->
+    <section class="products" id="products">
+      <h1 class="heading">Best <span>Sellings</span></h1>
+      <div class="box-container">
+        <div class="box" onclick="window.location.href='prod4.html' ">
+          <span class="discount">No Discount</span>
+          <div class="image">
+            <img class="img1" src="../img/elm3.jpg" width="250px" alt="" />
+            <div class="icons">
+              <a href=""
+                ><img src="../img/wishlist.png" alt="" width="25px" />
+                Add wishlist</a
+              >
+              <a href=""
+                ><img
+                  class="cart-btn"
+                  src="../img/shopping cart.png"
+                  alt=""
+                  width="28px"
+                />Add to cart</a
+              >
+            </div>
+          </div>
+          <div class="content">
+            <h3>Elm Bonsai</h3>
+            <div class="price">Rs 10,000</div>
+          </div>
+        </div>
+
+        <div class="box" onclick="window.location.href='prod5.html'">
+          <span class="discount">-18%</span>
+          <div class="image">
+            <img class="img1" src="../img/axalea2.jpg" width="250px" alt="" />
+            <div class="icons">
+              <a href=""
+                ><img src="../img/wishlist.png" alt="" width="25px"
+              />Add wishlist</a>
+              <a href=""
+                ><img
+                  class="cart-btn"
+                  src="../img/shopping cart.png"
+                  alt=""
+                  width="28px"
+                />Add to cart</a
+              >
+            </div>
+          </div>
+          <div class="content">
+            <h3>Azalea Bonsai</h3>
+            <div class="price">Rs 9,840<span>Rs 12,000</span></div>
+          </div>
+        </div>
+
+        <div class="box" onclick="window.location.href='prod6.html'">
+          <span class="discount">Sold Out</span>
+          <div class="image">
+            <img class="img1" src="../img/boxwood1.jpg" width="250px" alt="" />
+            <div class="icons">
+              <a href=""
+                ><img src="../img/wishlist.png" alt="" width="25px" />add
+                wishlist</a
+              >
+              <a href=""
+                ><img
+                  class="cart-btn"
+                  src="../img/shopping cart.png"
+                  alt=""
+                  width="28px"
+                />Add to cart</a
+              >
+            </div>
+          </div>
+          <div class="content">
+            <h3>Boxwood Bonsai</h3>
+            <div class="price"><span>Sold Out</span></div>
+          </div>
+        </div>
+
+        <div class="box" onclick="window.location.href='prod7.html'">
+          <span class="discount">-5%</span>
+          <div class="image">
+            <img class="img1" src="../img/fiscus1.jpg" width="250px" alt="" />
+            <div class="icons">
+              <a href=""
+                ><img src="../img/wishlist.png" alt="" width="25px" />add
+                wishlist</a
+              >
+              <a href=""
+                ><img
+                  class="cart-btn"
+                  src="../img/shopping cart.png"
+                  alt=""
+                  width="28px"
+                />Add to cart</a
+              >
+            </div>
+          </div>
+          <div class="content">
+            <h3>Ficus Bonsai</h3>
+            <div class="price">Rs 10,450<span>Rs 11,000</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--best selling products page ends-->
+    <div class="dis">
+      <h2>"Get" <span> 20% off </span> "Your Next Order"</h2>
+
+      <form>
+        <input
+          type="email"
+          id="mc-email"
+          name="EMAIL"
+          placeholder="Your email address"
+          autocomplete="off"
+        />
+        <a class="btn" type="submit" id="mc-submit" onclick="function1()"
+          >Subscribe</a
+        >
+      </form>
+      <div class="popupbox" id="nep">
+        <h1>Thank You ,Please check your Email.</h1>
+        <div class="btns">
+          <a onclick="nepal11()" class="btn1">Close</a>
+        </div>
+      </div>
+      <div class="popupbox1" id="nepa">
+        <h1>Sorry ,Please Enter your Email Again.</h1>
+        <div class="btns">
+          <a onclick="nepal12()" class="btn1">Close</a>
+        </div>
+      </div>
+    </div>
+
+    <!--footer secction starts-->
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social_icon">
+        <li>
+          <a href="#">
+            <img src="../img/instagram icon.png" width="40px" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../img/linkedin.png" width="40px" alt="" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../img/imgbin_facebook-png.png" alt="" width="40px" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../img/twitter icon.png" width="40px" alt="" />
+          </a>
+        </li>
+      </ul>
+      <ul class="menua">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./product.html">Product</a></li>
+        <li><a href="./Blog.html">Blog</a></li>
+        <li><a href="Research.html">Research</a></li>
+        <li><a href="aboutus1.html">About Us</a></li>
+      </ul>
+      <p>&copy;2023 Bonsai Plants Nepal| All Rights Reserved</p>
+    </footer>
+    <!--footer section ends-->
+    <!--javascript link-->
+    <script src="../js/home.js"></script>
+  </body>
+</html>

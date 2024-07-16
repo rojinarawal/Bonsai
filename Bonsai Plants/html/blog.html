@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<style type="text/css">
+.slide1{
+    background-image:url(../img/slide9.jpg);
+    width: 100%;
+    height: 480px;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#blog{
+    padding: 50px 0 40px;
+    background-color: #EDF3F3;
+}
+body{
+    background-color: #EDF3F3;
+}
+.blog-container{
+    display:flex;
+    padding-left: 50px;
+    padding-right: 50px;
+    flex-wrap: wrap;
+    text-align:center;
+    justify-content: center;
+}
+.blog-box{
+    width:350px;
+    border: 1px solid #ececec;
+    margin: 15px;
+}
+.blog-img img{
+    width: 100%;
+    max-height:200px;
+    overflow: hidden;
+    object-fit:cover;
+    object-position: center;
+}
+.blog-text{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.blog-text span{
+    font-size: 15px;
+    color:#4FD3F9;
+}
+.blog-text .blog-title{
+    font-size: 25px;
+    font-weight:700;
+    color:black ;
+    text-align: center;
+}
+.blog-text .blog-title:hover{
+    color:#F5B301;
+}
+.blog-text p{
+    color: dimgray;
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 20px 0px;
+}
+.blog-text a{
+    color:black;
+    font-size: 15px;
+    text-align: right;
+}
+.blog-text a:hover{
+    color:green;
+}
+</style>
+<body>
+    <!--Header section starts-->
+    <header>
+        <a href="" class="logo"><img src="../img/logoo.png"  width="40px"></a>
+        <nav class="navbar">
+            <a href="./home.html">Home</a>
+            <a href="./product.html">Product</a>
+            <a href="./blog.html">Blog </a>
+            <a href="./Research.html">Research</a>
+            <a href="./aboutus.html">About us</a>
+        </nav>
+
+        <div class="icons">
+        <a href=""><img src="../img/search.png" alt="" width="28px"></a>
+        <a href="./account.html"><img src="../img/account.png" alt="" width="25px"></a>
+        <a href=""><img src="../img/wishlist.png" alt="" width="25px"></a>
+        <a href=""><img src="../img/shopping cart.png" alt="" width="28px"></a>
+        </div>
+    </header>
+          <!-- Header section ends-->
+
+        <section>
+            <div class="slide1">
+                <div id="hero"><br><br><br><br><br><br><br><br><br><br><br>
+                    <h2 style="font-size:50px; color:black;">Welcome to our <span style="color:#F5B301;font-size: 60px;"> Blog </span></h2>
+                    <p style="font-size:large;  font-weight: bold; color:#4FD3F9;"> Don't miss out on the latest news about Technology,
+                    <br>Global Bonsai Market...</p> 
+                   <br><br>
+                    <div class="dis">
+                        <form>
+                            <input type="email" id="mc-email" value name="EMAIL" placeholder="Enter your email" autocomplete="off" />
+                            <button type="submit" id="mc-submit">Subscribe</button>
+                        </form><br><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        <!--Blog section starts-->
+        <section id="blog">
+            <!--blog container -->
+            <div class="blog-container">
+
+                <!--blog_box-1-->
+                <div class="blog-box">
+                
+                    <!--img section-->
+                    <div class="blog-img">
+                        <a href="./blog1.html">
+                        <img src="../img/2.jpg" alt=""></a>
+                    </div>
+
+                    <!--text section-->
+                    <div class="blog-text">
+                        <span>January 1,2023</span><br>
+                        <a href="./blog1.html" target="_parent" class="blog-title">Tech in 2023</a>
+                        <p>The main trends to pay special attention to this year. Here, we discuss the new trends that may influence your business over the coming year...</p>
+                        <a href="./blog1.html" target="_parent" >Read more >></a>
+                    </div>
+                </div>
+
+            <!--blog_box-2-->
+            <div class="blog-box">
+                
+                <!--img section-->
+                <div class="blog-img">
+                    <a href="./blog2.html">
+                    <img src="../img/1.jpg" alt=""></a>
+                </div>
+
+                <!--text section-->
+                <div class="blog-text">
+                    <span>February 2,2023</span><br>
+                    <a href="./blog2.html" target="_parent" class="blog-title">Tech's beneficial impacts</a>
+                    <p>Our world has undergone significant positive change thanks to technology. This blog will highlight the numerous ways that technology has made our lives better...</p>
+                    <a href="./blog2.html" target="_parent" >Read more >></a>
+                </div>
+            </div>
+
+            <!--blog_box-3-->
+            <div class="blog-box">
+                
+                <!--img section-->
+                <div class="blog-img">
+                    <a href="./blog3.html">
+                    <img src="../img/3.jpg" alt=""></a>
+                </div>
+
+                <!--text section-->
+                <div class="blog-text">
+                    <span>July 3,2022</span><br>
+                    <a href="./blog3.html" target="_parent" class="blog-title">Downside of Tech</a>
+                    <p>The way we live, work, and interact has been revolutionized by technology, but there are drawbacks as well.This blog explores the negative effects of technology...</p>
+                    <a href="./blog3.html" target="_parent" >Read more >></a>
+                </div>
+            </div>
+
+            <!--blog_box-4-->
+            <div class="blog-box">
+                
+                <!--img section-->
+                <div class="blog-img">
+                    <a href="./blog4.html">
+                    <img src="../img/4.jpg" alt=""></a>
+                </div>
+
+                <!--text section-->
+                <div class="blog-text">
+                    <span>December 25,2022</span>
+                    <a href="./blog4.html" target="_parent" class="blog-title">Impacts of technology on Bonsai Business</a>
+                    <p>From improved growing techniques to increased competition, technology has played a crucial role in shaping the future of the bonsai business...</p>
+                    <a href="./blog4.html" target="_parent">Read more >></a>
+                </div>
+            </div>
+
+            <!--blog_box-5-->
+            <div class="blog-box">
+                
+                <!--img section-->
+                <div class="blog-img">
+                    <a href="./blog5.html">
+                    <img src="../img/5.jpg" alt=""></a>
+                </div>
+
+                <!--text section-->
+                <div class="blog-text">
+                    <span>February 1,2023</span><br>
+                    <a href="./blog5.html" target="_parent" class="blog-title">IT and Business</a>
+                    <p>In nutshell, the business world has been significantly impacted by technology, which has resulted in significant modifications to how businesses operate and compete.</p>
+                    <a href="./blog5.html" target="_parent">Read more >></a>
+                </div>
+            </div>
+
+        </div>
+        </section>
+
+<!--footer section starts-->
+<footer>
+    <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+    </div>
+    <ul class="social_icon">
+        <li>
+            <a href="#">
+                <img src="../img/instagram icon.png" width="40px"  alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../img/linkedin.png" width="40px" alt="">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../img/imgbin_facebook-png.png" alt="" width="40px">
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="../img/twitter icon.png" width="40px" alt="">
+            </a>
+        </li>
+    </ul>
+    <ul class="menua">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./product.html">Product</a></li>
+        <li><a href="./blog.html">Blog</a></li>
+        <li><a href="./Research.html">Research</a></li>
+        <li><a href="./aboutus.html">About Us</a> </li>
+    </ul>
+    <p>&copy;2023 Bonsai Plants Nepal| All Rights Reserved</p>
+</footer>
+<!--footer section ends-->
+
+    <!--javascript link-->
+    <script src="../js/home.js"></script>
+</body>
+</html>
+

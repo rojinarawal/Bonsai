@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        min-height: 1000px;
+        background: url(../img//account\ bg.jpg);
+
+      }
+      .main {
+        width: 350px;
+        height: 450px;
+        background: red;
+        overflow: hidden;
+        background: url(../img/230892.jpg) no-repeat center / cover;
+        border-radius: 10px;
+        box-shadow: 5px 20px 50px #000;
+        position: absolute;
+        top: 25%;
+        right: 35%;
+      }
+      #chk {
+        display: none;
+      }
+      .signup {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      label {
+        color: #fff;
+        font-size: 2.3em;
+        justify-content: center;
+        display: flex;
+        margin: 60px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+      }
+      .text {
+        padding-top: 10px;
+      }
+      input {
+        width: 60%;
+        height: 25px;
+        background: #e0dede;
+        display: flex;
+        margin: 20px auto;
+        padding: 10px;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+      }
+      .btn {
+        width: 60%;
+        height: 40px;
+        margin: 10px auto;
+        justify-content: center;
+        display: block;
+        color: #fff;
+        background: #573b8a;
+        font-size: 1em;
+        font-weight: bold;
+        margin-top: 20px;
+        outline: none;
+        border: none;
+        border-radius: 5px;
+        transition: 0.2s ease-in;
+        cursor: pointer;
+        text-align: center;
+        font-size: 23px;
+        padding-top: 4px;
+      }
+      .btn:hover {
+        background: #6d44b8;
+      }
+      .login {
+        height: 460px;
+        background: #eee;
+        border-radius: 60% / 10%;
+        transform: translateY(-180px);
+        transition: 0.8s ease-in-out;
+      }
+      .login label {
+        color: #573b8a;
+        transform: scale(0.6);
+      }
+      #chk:checked ~ .login {
+        transform: translateY(-450px);
+      }
+
+      #chk:checked ~ .login label {
+        transform: scale(1);
+      }
+      #chk:checked ~ .signup label {
+        transform: scale(0.6);
+      }
+      .popupbox1 {
+        position: absolute;
+        top: 70%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+        width: 400px;
+        background: #f2f2f2;
+        text-align: center;
+        align-items: center;
+        padding: 40px;
+        border: 1px solid #b3b3b3;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        border-radius: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+      }
+      .popupbox12 {
+        position: absolute;
+        top: 70%;
+        left: 51%;
+        transform: translate(-50%, -50%);
+        user-select: none;
+        width: 400px;
+        background: #f2f2f2;
+        text-align: center;
+        align-items: center;
+        padding: 40px;
+        border: 1px solid #b3b3b3;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        z-index: 2;
+        border-radius: 15px;
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .btn2:hover {
+        background-color: #083374;
+      }
+      .btn1 {
+        display: block;
+        border: 1px solid black;
+        width: 80px;
+        position: relative;
+        margin-top: 30px;
+        margin-left: 120px;
+        padding: 4px 7px;
+        border-radius: 15px;
+        background-color: rgb(25, 133, 127);
+        color: #eee;
+      }
+      .btn1:hover {
+        background-color: #122644;
+      }
+      .popupbox h1,
+      .popupbox1 h1 {
+        font-size: 23px;
+        color: #444040;
+      }
+    </style>
+    <!--Header section starts-->
+    <header>
+      <a href="" class="logo"
+        ><img
+          src="../img/logoo.png"
+          width="40px"
+      /></a>
+      <nav class="navbar">
+        <a href="./home.html">Home</a>
+        <a href="./product.html">Product</a>
+        <a href="./Blog.html">Blog </a>
+        <a href="./Research.html">Research</a>
+        <div class="dropdown">
+          <a href="./aboutus.html">About us</a>
+          <div class="dropdown-content">
+            <a href="./aboutus.html">Niroj</a>
+            <a href="./aboutus1.html">Paleswan</a>
+            <a href="./aboutus2.html">Rojina</a>
+            <a href="./aboutus3.html">Jay </a>
+            <a href="./aboutus4.html">Adish</a>
+          </div>
+        </div>
+      </nav>
+
+      <div class="icons">
+        <a href="" onclick="name123()"
+          ><img src="../img/search.png" alt="" width="28px"
+        /></a>
+        <a href="./account.html"
+          ><img src="../img/account.png" alt="" width="25px"
+        /></a>
+        <a href="" onclick="name123()"
+          ><img src="../img/wishlist.png" alt="" width="25px"
+        /></a>
+        <a href="" onclick="name123()"
+          ><img src="../img/shopping cart.png" alt="" width="28px"
+        /></a>
+      </div>
+    </header>
+    <!-- Header section ends-->
+    <!--account section starts-->
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
+
+      <div class="signup">
+        <form name="myname" onsubmit="return validateForm()">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" id="text" name="txt" placeholder="User name" />
+          <input type="email" id="email" name="email" placeholder="Email" />
+          <input
+            type="Password"
+            id="password"
+            name="password"
+            placeholder="Password"
+          />
+          <a class="btn" onclick="account()">Sign Up</a>
+        </form>
+      </div>
+      <div class="login">
+        <form name="myname">
+          <label for="chk" aria-hidden="true" class="text">Login</label>
+          <input type="email" name="email" id="email1" placeholder="Email" />
+          <input
+            type="Password"
+            name="password"
+            id="pass1"
+            placeholder="Password"
+          />
+          <a onclick="account1()" class="btn">Login</a>
+        </form>
+      </div>
+    </div>
+    <div class="popupbox1" id="nep1">
+      <h1>Thank You</h1>
+      <div class="btns">
+        <a onclick="nepal11()" class="btn1">Close</a>
+      </div>
+    </div>
+    <div class="popupbox12" id="nepa1">
+      <h1>Sorry , Enter your Information Again.</h1>
+      <div class="btns">
+        <a onclick="nepal12()" class="btn1">Close</a>
+      </div>
+    </div>
+    <!--account section ends-->
+    <script>
+      function account() {
+        var text1 = document.getElementById("text").value;
+        var email1 = document.getElementById("email").value;
+        var password1 = document.getElementById("password").value;
+        if (text1 == "" || email1 == "" || password1 == "") {
+          document.getElementById("nepa1").style.opacity = "10";
+          document.getElementById("nepa1").style.pointerEvents = "all";
+        } else {
+          document.getElementById("nep1").style.opacity = "10";
+          document.getElementById("nep1").style.pointerEvents = "all";
+          document.getElementById("text").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+        }
+      }
+      function account1() {
+        var email1 = document.getElementById("email1").value;
+        var password1 = document.getElementById("pass1").value;
+        if (email1 == "" || password1 == "") {
+          document.getElementById("nepa1").style.opacity = "10";
+          document.getElementById("nepa1").style.pointerEvents = "all";
+        } else {
+          document.getElementById("nep").style.opacity = "10";
+          document.getElementById("nep").style.pointerEvents = "all";
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+        }
+      }
+      function nepal12() {
+        document.getElementById("nepa1").style.opacity = "0";
+        document.getElementById("nepa1").style.pointerEvents = "none";
+      }
+      function nepal11() {
+        document.getElementById("nep1").style.opacity = "0";
+        document.getElementById("nep1").style.pointerEvents = "none";
+      }
+    </script>
+  </body>
+</html>
